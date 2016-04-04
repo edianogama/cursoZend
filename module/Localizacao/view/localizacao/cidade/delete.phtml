@@ -1,0 +1,16 @@
+<?php
+    $title = 'Excluir Cidade';
+    $this->headTitle($title);
+    ?>
+    <h1><?php echo $this->escapeHtml($title); ?></h1>
+
+    <p>Você tem certeza que vai deletar esses registros:
+        '<?php echo $this->escapeHtml($cidade->nome); ?>' 
+    </p>
+    <form action="<?php echo $this->basepath("localizacao/cidade/delete/{$this->id}"); ?>" method="post">
+    <div>
+        <input type="hidden" name="id" value="<?php echo (int) $cidade->id; ?>" />
+        <input type="submit" name="del" value="Sim" />
+        <input type="submit" name="del" value="Nao" />
+    </div>
+    </form>

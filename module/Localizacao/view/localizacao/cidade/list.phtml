@@ -1,0 +1,44 @@
+<a href="add" class="btn btn-default">Adicionar Cidade</a>
+<table class="table table-bordered">
+    <tr>
+        <th>
+            #
+        </th>
+        <th>
+            Nome
+        </th>
+        <th>
+            Latitude
+        </th>
+        <th>
+            Longitude
+        </th>
+        <th>
+            Ação
+        </th>
+
+    </tr>
+    <?php foreach ($cidades as $cidade):?>
+    <tr>
+        <td>
+            <?php echo $cidade->id; ?>
+        </td>
+        <td>
+            <?php echo $cidade->nome; ?>
+        </td>
+        <td>
+            <?php echo $cidade->latitude; ?>
+        </td>
+        <td>
+            <?php echo $cidade->longitude; ?>
+        </td>
+
+         <td>
+             <a href="<?php echo $this->basePath('localizacao/cidade/edit/' . $cidade->id) ?>"><span class="glyphicon glyphicon-pencil"></span> Editar</a>
+             <a href="<?php echo $this->basePath('localizacao/cidade/delete/' . $cidade->id) ?>"><span class="glyphicon glyphicon-pencil"></span> Delete</a>
+         </td>
+    </tr>
+    <?php endforeach; ?>
+</table>
+
+

@@ -1,0 +1,38 @@
+<a href="add" class="btn btn-default">Adicionar Estado</a>
+<table class="table table-bordered">
+    <tr>
+        <th>
+            #
+        </th>
+        <th>
+            Nome
+        </th>
+        <th>
+            UF
+        </th>
+        <th>
+            Ação
+        </th>
+
+    </tr>
+    <?php foreach ($estados as $estado):?>
+    <tr>
+        <td>
+            <?php echo $estado->id; ?>
+        </td>
+        <td>
+            <?php echo $estado->nome; ?>
+        </td>
+        <td>
+            <?php echo $estado->uf; ?>
+        </td>
+
+         <td>
+             <a href="<?php echo $this->basePath('localizacao/estado/edit/' . $estado->id) ?>"><span class="glyphicon glyphicon-pencil"></span> Editar</a>
+             <a href="<?php echo $this->basePath('localizacao/estado/delete/' . $estado->id) ?>"><span class="glyphicon glyphicon-pencil"></span> Delete</a>
+         </td>
+    </tr>
+    <?php endforeach; ?>
+</table>
+
+

@@ -1,0 +1,27 @@
+<table class="table table-bordered">
+    <tr>
+        <th>
+            ID
+        </th>
+        <th>
+            Nome
+        </th>
+    </tr>
+    <?php foreach ($perfis as $perfil): ?>
+    <tr>
+        <td>
+            <?php echo $perfil->id; ?>
+        </td>
+        <td>
+            <?php echo $perfil->nome; ?>
+        </td>
+    </tr>
+    <?php endforeach; ?>
+</table>
+<div class="row">
+        <nav class="menu">
+            <li><a href="/application/perfil/add">Adicionar perfil</a></li>
+        </nav>
+    </div>
+
+
